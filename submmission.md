@@ -117,12 +117,14 @@ uv run ai-content music --style jazz --provider lyria
 ## Results
 
 * Music was successfully generated using Lyria
-uv run python examples/lyria_example_ethiopian.py --style tizita-blues
+* uv run python examples/lyria_example_ethiopian.py --style tizita-blues
+* uv run ai-content music --prompt "ethiopian jazz with soulful vocals"  --provider lyria --lyrics exports/vocal/lyrics.txt
 
 * Outputs had correct duration and format
 
 *(Screenshots, file sizes, and durations can be attached separately.)*
 ![alt text](image.png)
+
 
 ---
 
@@ -141,9 +143,8 @@ bash: pip: command not found
 
 **Solution:**
 
-* Installed Python correctly
-* Installed required packages using `python -m pip install uv`
-* Ran commands using `python -m uv ...`
+* Installed required packages using `pip install uv`
+* Ran commands using `uv ...`
 
 **Additional Challenge:**
 
@@ -153,9 +154,8 @@ bash: pip: command not found
 uv run ai-content video --style nature --provider veo --duration 5
 ```
 
-**Workaround:** Using `python -m` ensures commands run even if PATH isn’t set, but Veo-related video posting remains unresolved.
+**Workaround:** Using `uv ` ensures commands run even if PATH isn’t set, but Veo-related video posting remains unresolved.
 
----
 
 # Insights & Learnings
 
@@ -176,8 +176,7 @@ uv run ai-content video --style nature --provider veo --duration 5
 * Providers like Veo and Lyria provide very fast results compared to traditional AI APIs.
 * However, dependency management is a bit tricky compared to more mature platforms like OpenAI or Hugging Face.
 
----
 
 ## Summary
 
-The setup went well after resolving environment issues. The provider architecture is flexible, but dependency versions need careful management. Using `python -m uv` worked reliably, and outputs were generated as expected, except for Veo video posting to YouTube which remains a challenge.
+The setup went well after resolving environment issues. The provider architecture is flexible, but dependency versions need careful management. Using `uv` worked reliably, and outputs were generated as expected, except for Veo video posting to YouTube which remains a challenge.
