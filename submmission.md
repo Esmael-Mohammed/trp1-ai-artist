@@ -124,6 +124,7 @@ uv run ai-content music --style jazz --provider lyria
 
 *(Screenshots, file sizes, and durations can be attached separately.)*
 ![alt text](image.png)
+
 ![alt text](image-1.png)
 
 ---
